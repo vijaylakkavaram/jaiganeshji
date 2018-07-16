@@ -1,0 +1,41 @@
+{
+  "name": "chat_app",
+  "version": "1.0.0",
+  "description": "Simple application using socket.io",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Me",
+  "license": "ISC",
+  "homepage": "",
+  "dependencies": {
+    "@ionic/app-scripts": "^3.1.6",
+    "async": "^2.6.0",
+    "btoa": "^1.1.2",
+    "colors": "^1.3.0",
+    "express": "^4.13.4",
+    "express-limiter": "^1.6.1",
+    "express-session": "^1.15.6",
+    "mssql": "^4.1.0",
+    "node-emoji": "^1.8.1",
+    "node-uuid": "^1.4.7",
+    "nodemailer": "^2.2.1",
+    "npm": "^6.1.0",
+    "popups": "^1.1.3",
+    "q": "^1.4.1",
+    "redis": "^2.4.2",
+    "socket.io": "^1.4.5",
+    "tedious": "^2.6.1",
+    "underscore": "^1.8.3",
+    "xoauth2": "^1.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.3",
+    "ws": "3.3.2"
+  }
+}

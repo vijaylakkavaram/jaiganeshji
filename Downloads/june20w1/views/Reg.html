@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">		
+		<title> Registration Form</title>
+    	<link rel ="stylesheet" href="/css/Reg.css">
+	</head>
+	<body bgcolor="#88c7ec">
+		<div class="login-banner-div">
+			<img src="http://www.chandusoft.com/images/logo/chandusoft_logo.png" alt="chandusoft logo">
+		</div>
+	<form class="login-form" action="http://localhost:8080/adminURL" method="POST">
+			<table class="chat-login-table">
+				<tr class="chat-login-table-tr">
+					<th colspan="2" class="chat-login-table-tr-th">
+						<h2>Agent Registration</h2>
+					</th>
+				</tr>
+				<tr class="chat-login-table-tr">
+					<th class="chat-login-table-tr-th">FirstName:</th>
+					<td class="chat-login-table-tr-td">
+						<input name="firstname" autocomplete="off" pattern="^[a-zA-Z ]{4,}"type="text" required class="chat-login-table-tr-th-input">
+					</td>
+				</tr>
+				<tr class="chat-login-table-tr">
+					<th class="chat-login-table-tr-th">LastName:</th>
+					<td class="chat-login-table-tr-td">
+						<input name="lastname" autocomplete="off"  pattern="^[a-zA-Z ]{4,}"type="text" required class="chat-login-table-tr-th-input">
+					</td>
+				</tr>
+				<tr class="chat-login-table-tr">
+					<th class="chat-login-table-tr-th">UserName:</th>
+					<td class="chat-login-table-tr-td">
+						<input name="username" autocomplete="off" pattern="^[a-zA-Z ]{4,}"type="text" required class="chat-login-table-tr-th-input">
+					</td>
+				</tr>
+				<tr class="chat-login-table-tr">
+					<th class="chat-login-table-tr-th">Password:</th>
+					<td class="chat-login-table-tr-td">
+						<input name="password" autocomplete="off"  type="password" required class="chat-login-table-tr-th-input">
+					</td>
+				</tr>
+				<tr class="chat-login-table-tr">
+					<th class="chat-login-table-tr-th">Gender:</th>
+					<td class="chat-login-table-tr-td">
+						<input type="radio" name="gender" value="male" checked> Male
+						<input type="radio" name="gender" value="female"> Female
+					
+					</td>
+				</tr>
+				<tr class="chat-login-table-tr">
+					<th class="chat-login-table-tr-th">Email:</th>
+					<td class="chat-login-table-tr-td">
+						<input name="email" autocomplete="off" type="email" required class="chat-login-table-tr-th-input">
+					</td>
+				</tr>
+			
+				<tr class="chat-login-table-tr">
+					<th class="chat-login-table-tr-th">Address:</th>
+					<td class="chat-login-table-tr-td">
+						<input name="address" autocomplete="off"  type="text" required class="chat-login-table-tr-th-input">
+					</td>
+				</tr>
+				<tr class="chat-login-table-tr">
+					<th class="chat-login-table-tr-th">PhoneNumber:</th>
+					<td class="chat-login-table-tr-td">
+						<input name="phonenumber" autocomplete="off" pattern="[0-9\(\)\-\+ ]{8,15}" type="number"required class="chat-login-table-tr-th-input">
+					</td>
+				</tr>
+				<tr class="chat-login-table-tr">
+					<th colspan="2" class="chat-login-table-tr-th">
+						<input type="submit" value="Register" name="log in" class="chat-login-table-tr-th-input" /> 
+					</th>
+				</tr>
+				
+				<tr class="chat-login-table-tr">
+					<th colspan="2" class="chat-login-table-tr-th">
+						<a href="http://localhost:8080/adminURL">Already Registered? Login</a> 
+					</th>
+				</tr>
+			</table>
+		</form>
+	</body>
+ 
+ 
+</html>	

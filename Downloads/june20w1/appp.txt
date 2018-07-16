@@ -1,0 +1,136 @@
+var Connection = require('tedious').Connection;  
+var Request = require('tedious').Request;  
+var TYPES = require('tedious').TYPES;  
+
+
+
+
+
+var config1 = {
+	userName: 'datapullman',  
+	password: 'system',  
+	server: 'localhost',
+	options: {
+		// encrypt: true, /*If you are connecting to a Microsoft Azure SQL database, you will need this*/
+		database: 'Live_Chat1'
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+				New_Ticket_Creation(result_ip,config.web_port,ssn,datetime)
+				function New_Ticket_Creation(Usr_Ip,Usr_Port,ssn){
+					console.log("Executing The New_Ticket_Creation");
+					request = new Request('New_Ticket_Creation', function(err){
+						if (err) {
+							console.log(err);
+							var rr=err['message'];
+							console.log("rr",rr);
+							if(rr!=null){
+								console.log('testing rr',rr);
+					 
+							}
+					
+						}
+						else{
+							 console.log('ticket created successfully');
+						}
+						 
+				});	
+				request.on('row', function(columns) {
+					columns.forEach(function(column) {
+						if (column.value === null) {
+							console.log('NULL');
+						} else {
+						result += column.value + " ";
+						}
+					});
+				 
+					console.log('ticket creation data',result);
+					
+			  });	
+				
+				
+
+
+
+
+
+
+
+
+						request.addParameter('Usr_IP_Address', TYPES.VarChar, Usr_Ip);
+						request.addParameter('Usr_Port_Id', TYPES.VarChar, Usr_Port);
+						request.addParameter('Session_Id', TYPES.VarChar, ssn);
+						request.addParameter('Con_Start_Time', TYPES.DateTime, new Date());
+						 // Check how many rows were inserted
+						request.on('doneInProc', function(rowCount, more) {
+							console.log(rowCount + ' row(s) inserted');
+						});
+					connection.callProcedure(request);
+				}
+
+
+
+                New_Ticket_Assignment();
+						function New_Ticket_Assignment(Usr_Id){
+							console.log("Executing The New_ticket_Assignement");
+							request = new Request('New_Ticket_Assignment', function(err){
+								if (err) {
+									console.log(err);
+									var rr=err['message'];
+									console.log("rr",rr);
+									if(rr!=null){
+										console.log('testing rr',rr);
+							 
+									}
+							
+								}
+								else{
+									 console.log('ticket created successfully');
+								}
+								 
+						});	
+						request.on('row', function(columns) {
+							columns.forEach(function(column) {
+								if (column.value === null) {
+									console.log('NULL');
+								} else {
+								result += column.value + " ";
+								}
+							});
+						 
+							console.log('result data',result);
+							
+					  });				
+					
+						
+
+
+
+
+
+
+
+
+
+
+								request.addParameter('Usr_Id', TYPES.Int, Usr_Id);
+									 // Check how many rows were inserted
+								request.on('doneInProc', function(rowCount, more) {
+									console.log(rowCount + ' row(s) inserted');
+								});
+							connection.callProcedure(request);
+						}
+
+

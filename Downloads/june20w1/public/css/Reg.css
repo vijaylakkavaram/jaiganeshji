@@ -1,0 +1,29 @@
+body {
+	margin: 0px;
+}
+
+.login-banner-div {
+	background-color: white;	
+}
+
+.login-banner-div img {
+	display: block;
+	margin: 0 auto;	
+}
+
+.login-heading {
+	text-align: center;
+}
+
+
+.chat-login-table {
+	margin: 0 auto;	
+}
+
+.chat-login-table .chat-login-table-tr .chat-login-table-tr-th {
+	margin-left:1200px;
+}
+
+.chat-login-table .chat-login-table-tr .chat-login-table-tr-td {
+	padding: 10px;
+}
